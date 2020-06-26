@@ -38,6 +38,15 @@ const PollLayout = (props) => {
 
   const [poll, setPoll] = useState(props.pollData);
 
+  //The following function is nothing but a lot of spread operator
+  /** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
+   * run the following example somewhere and you will undertstand the power of spread opertor
+   * const obj1 = { foo: "bar", x: 42 };
+   * const obj2 = { foo: "baz", y: 13 };
+   * //removes duplicate
+   * let obj3 = { ...obj1, ...obj2 }; //only keep values from second in the case of a duplicate
+   * console.log(obj3);
+   */
   const handleOptionClick = (option) => {
     setPoll((prevState) => {
       return {
@@ -48,6 +57,7 @@ const PollLayout = (props) => {
         },
       };
     });
+
     // now we may choose to upload only single poll in the backend:
     // updatePollBackEnd(props.pollId, poll); // call backend
 

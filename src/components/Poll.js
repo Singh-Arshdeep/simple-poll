@@ -21,6 +21,8 @@ const Poll = () => {
   const classes = useStyles();
   const [allPoll, setAllPoll] = useState(ALL_POLL);
 
+  // ignore this function for now
+  // come back to it at last
   const handleDataChange = (pollId, updatedPollData) => {
     setAllPoll((prevState) => {
       return {
