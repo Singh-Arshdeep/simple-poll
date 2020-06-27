@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/simple-poll/static/css/main.5ecd60fb.chunk.css",
+    "main.js": "/simple-poll/static/js/main.ab1b5e08.chunk.js",
+    "main.js.map": "/simple-poll/static/js/main.ab1b5e08.chunk.js.map",
+    "runtime-main.js": "/simple-poll/static/js/runtime-main.75304081.js",
+    "runtime-main.js.map": "/simple-poll/static/js/runtime-main.75304081.js.map",
+    "static/js/2.dc9c4dca.chunk.js": "/simple-poll/static/js/2.dc9c4dca.chunk.js",
+    "static/js/2.dc9c4dca.chunk.js.map": "/simple-poll/static/js/2.dc9c4dca.chunk.js.map",
+    "index.html": "/simple-poll/index.html",
+    "precache-manifest.0bce28b860a889a0ea33b6632de62e16.js": "/simple-poll/precache-manifest.0bce28b860a889a0ea33b6632de62e16.js",
+    "service-worker.js": "/simple-poll/service-worker.js",
+    "static/css/main.5ecd60fb.chunk.css.map": "/simple-poll/static/css/main.5ecd60fb.chunk.css.map",
+    "static/js/2.dc9c4dca.chunk.js.LICENSE.txt": "/simple-poll/static/js/2.dc9c4dca.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.75304081.js",
+    "static/js/2.dc9c4dca.chunk.js",
+    "static/css/main.5ecd60fb.chunk.css",
+    "static/js/main.ab1b5e08.chunk.js"
+  ]
+}
