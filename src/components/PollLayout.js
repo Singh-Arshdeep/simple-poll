@@ -47,13 +47,18 @@ const PollLayout = (props) => {
    * let obj3 = { ...obj1, ...obj2 }; //only keep values from second in the case of a duplicate
    * console.log(obj3);
    */
-  const handleOptionClick = (option) => {
+  const handleOptionClick = (optionNumber, option) => {
+    const selectedOption = Object.keys(option)[0];
+    const selectedOptionValue = option[Object.keys(option)[0]];
+
     setPoll((prevState) => {
       return {
         ...prevState,
         options: {
           ...prevState.options,
-          [option]: prevState.options[option] + 1,
+          [optionNumber]: {
+            [selectedOption]: selectedOptionValue + 1,
+          },
         },
       };
     });
@@ -71,7 +76,7 @@ const PollLayout = (props) => {
     <Card className={classes.root} variant="outlined">
       <CardContent>
         <Typography variant="h5" component="h2">
-          {poll.ques}
+          {poll.question}
         </Typography>
       </CardContent>
       <CardActions>
@@ -81,12 +86,12 @@ const PollLayout = (props) => {
               <ListItem
                 button
                 onClick={() => {
-                  handleOptionClick(key);
+                  handleOptionClick(key, value);
                 }}
               >
-                <span>{key}</span>
+                <span>{Object.keys(value)}</span>
                 <span style={{ paddingLeft: 180, position: "absolute" }}>
-                  {value}
+                  {value[Object.keys(value)]}
                 </span>
               </ListItem>
               <Divider />

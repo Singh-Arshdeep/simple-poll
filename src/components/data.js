@@ -1,20 +1,20 @@
-export const ALL_POLL = {
+export let ALL_POLL = {
   poll1: {
-    ques: "would you go to party?",
+    question: "would you go to party?",
     options: {
-      yes: 0,
-      no: 0,
-      maybe: 0,
+      option1: { yes: 0 },
+      option2: { no: 0 },
+      option3: { maybe: 0 },
     },
   },
   poll2: {
-    ques: "What food are we getting?",
+    question: "What food are we getting?",
     options: {
-      Korean: 0,
-      Turkish: 0,
-      Brazilian: 0,
-      Vietnamese: 0,
-      Indian: 0,
+      option1: { Korean: 0 },
+      option2: { Turkish: 0 },
+      option3: { Brazilian: 0 },
+      option4: { Vietnamese: 0 },
+      option5: { Indian: 0 },
     },
   },
 };

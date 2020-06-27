@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 
 // componenets
 import PollLayout from "./PollLayout";
+import PollModal from "./PollModal";
 
 // data
 import { ALL_POLL } from "./data";
@@ -35,6 +36,20 @@ const Poll = () => {
     // updatePollBackEnd(allPoll); // call backend
   };
 
+  const handleAddNewPoll = (newPoll) => {
+    const newPollId = "poll" + (Object.keys(allPoll).length + 1);
+    setAllPoll((prevState) => {
+      return {
+        ...prevState,
+        [newPollId]: newPoll,
+      };
+    });
+  };
+
+  useEffect(() => {
+    console.log(Object.keys(allPoll).length);
+  }, [allPoll]);
+
   return (
     <div className={classes.poll}>
       {Object.entries(allPoll).map(([key, value]) => (
@@ -45,6 +60,7 @@ const Poll = () => {
           handleDataChange={handleDataChange}
         />
       ))}
+      <PollModal handleAddNewPoll={handleAddNewPoll} />
     </div>
   );
 };
